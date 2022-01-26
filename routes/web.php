@@ -15,7 +15,12 @@
 //     return view('welcome');
 // });
 
+use App\Http\Controllers\Frontend\FrontendController;
+
 Route::get('/','Frontend\FrontendController@index');
+Route::get('about-us','Frontend\FrontendController@aboutUs')->name('about.us');
+Route::get('contact-us','Frontend\FrontendController@contactUs')->name('contact.us');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
